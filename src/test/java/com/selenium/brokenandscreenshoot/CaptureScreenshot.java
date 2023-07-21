@@ -34,27 +34,24 @@ public class CaptureScreenshot {
 
 		// capture screenshot of specific area from webpage -- selenium 4+
 
-		/*
-		 * WebElement featuredproducts=driver.findElement(By.
-		 * xpath("//div[@class='product-grid home-page-product-grid']"));
-		 * 
-		 * File src=featuredproducts.getScreenshotAs(OutputType.FILE); File trg=new
-		 * File(
-		 * "C:\\Users\\pavan\\Aug19Batch\\seleniumproject\\screenshots\\featureproducts.png"
-		 * ); FileUtils.copyFile(src, trg);
-		 */
+		WebElement featuredproducts = driver
+				.findElement(By.xpath("//div[@class='product-grid home-page-product-grid']"));
+
+		File src = featuredproducts.getScreenshotAs(OutputType.FILE);
+		File trg = new File(System.getProperty("user.dir")+"\\screenshots\\featureproducts.png");
+		FileUtils.copyFile(src, trg);
 
 		// capture screenshot of specific Web element -- selenium 4+
 
 		WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
 
-		File src = logo.getScreenshotAs(OutputType.FILE);
-		/*
+		/*File src = logo.getScreenshotAs(OutputType.FILE);
+		
 		 * File trg=new
 		 * File("C:\\Users\\pavan\\Aug19Batch\\seleniumproject\\screenshots\\logo.png");
-		 */
-		File trg = new File("D:\\seleniumbasics\\screenshots\\logo.png");
-		FileUtils.copyFile(src, trg);
+		 
+		File trg = new File(System.getProperty("user.dir") + "\\screenshots\\logo.png");
+		FileUtils.copyFile(src, trg);*/
 
 	}
 

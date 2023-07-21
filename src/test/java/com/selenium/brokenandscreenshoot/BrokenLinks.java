@@ -1,6 +1,5 @@
 package com.selenium.brokenandscreenshoot;
 
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -10,7 +9,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -18,8 +17,8 @@ public class BrokenLinks {
 
 	public static void main(String[] args) throws IOException {
 
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriverManager.iedriver().setup();
+		WebDriver driver = new InternetExplorerDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.get("https://www.facebook.com/");
@@ -48,10 +47,10 @@ public class BrokenLinks {
 			conn.connect();
 
 			if (conn.getResponseCode() >= 400) {
-				System.out.println(hrefAttValue + "     " + "====> Broken Link");
+				System.out.println(hrefAttValue + "     " + " Broken Link");
 				brokenlinks++;
 			} else {
-				System.out.println(hrefAttValue + "     " + "====> Not Broken Link");
+				System.out.println(hrefAttValue + "     " + "Not Broken Link");
 			}
 
 		}

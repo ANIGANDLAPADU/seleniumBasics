@@ -27,6 +27,7 @@ public class AutoSuggetDropDownGoogle {
 		List<WebElement> elements = driver
 				.findElements(By.xpath("//div[@class='wM6W7d' and @role='presentation']//span"));
 		System.out.println(elements.size());
+
 		for (int i = 0; i < elements.size(); i++) {
 			String text = elements.get(i).getText();
 			if (text.equals("babu88")) {
@@ -35,6 +36,11 @@ public class AutoSuggetDropDownGoogle {
 			}
 
 		}
+
+		/*
+		 * for (WebElement element : elements) { String str = element.getText(); if
+		 * (str.equals("babu88")) { element.click(); } }
+		 */
 
 	}
 

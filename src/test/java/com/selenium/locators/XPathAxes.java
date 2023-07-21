@@ -33,7 +33,7 @@ public class XPathAxes {
 		// Child - Selects all children of the current node (One or many)
 		List<WebElement> childs = driver
 				.findElements(By.xpath("//a[contains(text(),'NIIT Ltd')]/ancestor::tr/child::td"));
-		System.out.println("Number of child elements:" + childs.size());// 
+		System.out.println("Number of child elements:" + childs.size());//
 
 		// Ancestor - Selects all ancestors (parent, grandparent, etc.)
 		text = driver.findElement(By.xpath("//a[contains(text(),'NIIT Ltd')]/ancestor::tr")).getText();
