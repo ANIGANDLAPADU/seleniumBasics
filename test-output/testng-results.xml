@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13624" started-at="2023-07-21T10:26:48Z" finished-at="2023-07-21T10:27:01Z">
+  <suite name="Default suite" duration-ms="15335" started-at="2023-07-24T09:55:34Z" finished-at="2023-07-24T09:55:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13624" started-at="2023-07-21T10:26:48Z" finished-at="2023-07-21T10:27:01Z">
+    <test name="Default test" duration-ms="15335" started-at="2023-07-24T09:55:34Z" finished-at="2023-07-24T09:55:49Z">
       <class name="com.selenium.mouseactions.Keysactions">
-        <test-method status="PASS" signature="keystest()[pri:0, instance:com.selenium.mouseactions.Keysactions@77b52d12]" name="keystest" duration-ms="13605" started-at="2023-07-21T15:56:48Z" finished-at="2023-07-21T15:57:01Z">
+        <test-method status="PASS" signature="keystest()[pri:0, instance:com.selenium.mouseactions.Keysactions@77b52d12]" name="keystest" duration-ms="15275" started-at="2023-07-24T15:25:34Z" finished-at="2023-07-24T15:25:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- keystest -->
