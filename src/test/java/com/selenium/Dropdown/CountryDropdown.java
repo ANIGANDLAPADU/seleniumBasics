@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -13,7 +14,9 @@ public class CountryDropdown {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.setHeadless(true);
+		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://testautomationpractice.blogspot.com/");
 		List<WebElement> country = driver
 				.findElements(By.xpath("//select[@class='form-control' and @id='country']//option"));

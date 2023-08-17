@@ -22,7 +22,6 @@ public class headless {
 		ChromeDriver driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.google.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		List<WebElement> nolinks = driver.findElements(By.tagName("a"));
 		System.out.println(nolinks.size());
 		for (WebElement elements : nolinks) {
@@ -34,7 +33,7 @@ public class headless {
 			URL url = new URL(arr);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.connect();
-			if (conn.getResponseCode() >= 400) {
+			if (conn.getResponseCode() >= 200) {
 				System.out.println("URL is not a broken link" + arr);
 			} else {
 				System.out.println("URL is broken link " + arr);

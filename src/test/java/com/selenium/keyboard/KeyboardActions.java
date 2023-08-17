@@ -42,7 +42,7 @@ public class KeyboardActions {
 		
 		//ctrl+v
 		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
-		
+ 		
 	}
 
 }

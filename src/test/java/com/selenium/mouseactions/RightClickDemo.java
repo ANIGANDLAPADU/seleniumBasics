@@ -29,7 +29,6 @@ public class RightClickDemo {
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Copy']")).click(); // click on copy option
 		
-		Thread.sleep(5000);
 		
 		driver.switchTo().alert().accept(); // close alert window
 		

@@ -29,7 +29,7 @@ public class Broken {
 			URL url = new URL(links);
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.connect();
-			if (con.getResponseCode() >= 400) {
+			if (con.getResponseCode() >= 200) {
 				System.out.println("This is not broken link" + links);
 			} else {
 				System.out.println("This is broken link" + links);
