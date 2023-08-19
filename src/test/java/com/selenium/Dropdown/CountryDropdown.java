@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CountryDropdown {
 
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(true);
 		WebDriver driver = new ChromeDriver(options);

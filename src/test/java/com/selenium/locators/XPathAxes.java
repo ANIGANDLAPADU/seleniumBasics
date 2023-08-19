@@ -12,7 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class XPathAxes {
 
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 
 		WebDriver driver = new ChromeDriver();
 

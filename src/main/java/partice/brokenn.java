@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class brokenn {
 
 	public static void main(String[] args) throws IOException {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();

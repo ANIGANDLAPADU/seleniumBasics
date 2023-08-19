@@ -11,7 +11,7 @@ public class BrowserCommands {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver=new ChromeDriver();
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/");

@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Keysactions {
 	@Test
 	public void keystest() {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		/*
 		 * ChromeOptions options = new ChromeOptions(); options.setHeadless(true);
 		 */

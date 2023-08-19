@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class alert {
 
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 		WebElement al = driver.findElement(By.xpath("//button[@onclick='jsAlert()']"));

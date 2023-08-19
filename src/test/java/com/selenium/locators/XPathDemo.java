@@ -10,7 +10,7 @@ public class XPathDemo {
 
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 
 		WebDriver driver = new ChromeDriver();
 

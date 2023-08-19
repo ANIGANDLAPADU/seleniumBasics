@@ -11,7 +11,7 @@ public class framesa {
 	public static WebDriver driver;
 
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		driver = new ChromeDriver();
 		driver.get("https://ui.vision/demo/webtest/frames/");
 		WebElement frame = driver.findElement(By.xpath("//frame[@src='frame_1.html']"));

@@ -18,7 +18,7 @@ public class headless {
 	public static void main(String[] args) throws IOException {
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(true);
-		ChromeDriverManager.chromedriver().setup();
+		/* ChromeDriverManager.chromedriver().setup(); */
 		ChromeDriver driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.google.com/");

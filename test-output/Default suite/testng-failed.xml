@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.TestNg.TestNew">
+      <class name="partice.windows">
         <methods>
-          <include name="open"/>
-          <include name="testone"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.selenium.TestNg.TestNew -->
+      </class> <!-- partice.windows -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

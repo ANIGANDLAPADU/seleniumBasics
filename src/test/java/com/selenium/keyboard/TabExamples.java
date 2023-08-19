@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TabExamples {
 
 	public static void main(String[] args) {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://primusbank.qedgetech.com/");
 		driver.findElement(By.xpath("//input[@name=\"txtuId\"]")).sendKeys("Admin");

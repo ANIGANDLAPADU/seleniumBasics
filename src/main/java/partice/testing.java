@@ -15,7 +15,7 @@ public class testing {
 	@Parameters("browser")
 	public void testone(String br) {
 		if (br.equals("chorme")) {
-			WebDriverManager.chromedriver().setup();
+			/* WebDriverManager.chromedriver().setup(); */
 			WebDriver driver = new ChromeDriver();
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

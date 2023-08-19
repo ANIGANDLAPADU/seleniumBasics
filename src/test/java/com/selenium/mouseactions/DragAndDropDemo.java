@@ -13,7 +13,7 @@ public class DragAndDropDemo {
 
 	public static void main(String[] args) {
 		
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver =new ChromeDriver();
 		
 		driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");

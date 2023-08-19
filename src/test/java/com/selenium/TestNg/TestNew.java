@@ -17,7 +17,7 @@ public class TestNew {
 
 	@BeforeMethod
 	public void open() {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		driver = new ChromeDriver();
 		driver.get("https://phppot.com/demo/jquery-dependent-dropdown-list-countries-and-states/");
 		driver.manage().window().maximize();

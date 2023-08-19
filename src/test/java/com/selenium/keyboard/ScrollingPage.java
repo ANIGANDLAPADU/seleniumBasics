@@ -9,7 +9,7 @@ public class ScrollingPage {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 
 		ChromeDriver driver = new ChromeDriver();
 

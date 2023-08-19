@@ -17,7 +17,7 @@ public class AutoSuggestDropDown {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		
 		WebDriver driver=new ChromeDriver();
 		

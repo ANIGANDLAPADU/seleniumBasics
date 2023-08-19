@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Broken {
 
 	public static void main(String[] args) throws IOException {
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/home.php");
 		List<WebElement> elements = driver.findElements(By.tagName("a"));

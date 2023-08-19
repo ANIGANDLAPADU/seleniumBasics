@@ -13,7 +13,7 @@ public class RightClickDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver =new ChromeDriver();
 		
 		driver.get("http://swisnl.github.io/jQuery-contextMenu/demo.html");

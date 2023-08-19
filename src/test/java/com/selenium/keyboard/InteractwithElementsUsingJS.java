@@ -14,7 +14,7 @@ public class InteractwithElementsUsingJS {
 
 	public static void main(String[] args) {
 
-		WebDriverManager.chromedriver().setup();
+		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
