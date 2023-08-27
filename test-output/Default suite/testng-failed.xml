@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="partice.windows">
+      <class name="partice.Cross">
         <methods>
           <include name="test"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- partice.windows -->
+      </class> <!-- partice.Cross -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

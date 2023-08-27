@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -36,19 +37,18 @@ public class DoubleClickDemo {
 		
 		//String copiedtext=f2.getText();  // will not work
 		String copiedtext=f2.getAttribute("value");  // this will work
+		String exp=f2.getAttribute("value");
+		String actu="Welcome";
+		Assert.assertEquals(exp, actu);
 		
 		System.out.println("Copied text is:"+copiedtext);
 		
-		if(copiedtext.equals("Welcome"))
-		{
-			System.out.println("test passed");
-		}
-		else
-		{
-			System.out.println("test failed");
-					
-		}
-		
+		/*
+		 * if(copiedtext.equals("Welcome")) { System.out.println("test passed"); } else
+		 * { System.out.println("test failed");
+		 * 
+		 * }
+		 */		
 	}
 
 }

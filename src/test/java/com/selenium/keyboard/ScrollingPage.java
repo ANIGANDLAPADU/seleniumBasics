@@ -3,8 +3,6 @@ package com.selenium.keyboard;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class ScrollingPage {
 
 	public static void main(String[] args) throws InterruptedException {
