@@ -2,46 +2,64 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-27T11:32:57 IST" name="Suite" finished-at="2023-08-27T11:33:10 IST" duration-ms="12640">
+  <suite started-at="2023-09-02T07:52:41 IST" name="Default suite" finished-at="2023-09-02T07:53:05 IST" duration-ms="24221">
     <groups>
     </groups>
-    <test started-at="2023-08-27T11:32:57 IST" name="chrome" finished-at="2023-08-27T11:33:06 IST" duration-ms="8694">
-      <class name="partice.Cross">
-        <test-method is-config="true" signature="test(java.lang.String)[pri:0, instance:partice.Cross@5b247367]" started-at="2023-08-27T11:32:57 IST" name="test" finished-at="2023-08-27T11:33:06 IST" duration-ms="8580" status="PASS">
+    <test started-at="2023-09-02T07:52:41 IST" name="Default test" finished-at="2023-09-02T07:53:05 IST" duration-ms="24221">
+      <class name="utils.test">
+        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:utils.test@58cbafc2]" started-at="2023-09-02T07:52:43 IST" name="testing" data-provider="data" finished-at="2023-09-02T07:52:55 IST" duration-ms="12410" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[seshu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[seshu@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9493033456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nandigama]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method signature="testing()[pri:0, instance:partice.Cross@5b247367]" started-at="2023-08-27T11:33:06 IST" name="testing" finished-at="2023-08-27T11:33:06 IST" duration-ms="29" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- testing -->
-      </class> <!-- partice.Cross -->
-    </test> <!-- chrome -->
-    <test started-at="2023-08-27T11:32:57 IST" name="edge" finished-at="2023-08-27T11:33:10 IST" duration-ms="12640">
-      <class name="partice.Cross">
-        <test-method is-config="true" signature="test(java.lang.String)[pri:0, instance:partice.Cross@4f32a3ad]" started-at="2023-08-27T11:32:57 IST" name="test" finished-at="2023-08-27T11:33:10 IST" duration-ms="12601" status="PASS">
+        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:utils.test@58cbafc2]" started-at="2023-09-02T07:52:55 IST" name="testing" data-provider="data" finished-at="2023-09-02T07:53:05 IST" duration-ms="10152" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Edge]]>
+                <![CDATA[babu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[babu@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1234566789]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nandigama]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method signature="testing()[pri:0, instance:partice.Cross@4f32a3ad]" started-at="2023-08-27T11:33:10 IST" name="testing" finished-at="2023-08-27T11:33:10 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- testing -->
-      </class> <!-- partice.Cross -->
-    </test> <!-- edge -->
-  </suite> <!-- Suite -->
+      </class> <!-- utils.test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
