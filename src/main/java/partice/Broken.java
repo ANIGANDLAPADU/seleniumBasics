@@ -15,26 +15,24 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Broken {
 
 	public static void main(String[] args) throws IOException {
-		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.facebook.com/home.php");
-		List<WebElement> elements = driver.findElements(By.tagName("a"));
-		System.out.println("No of Eelements" + elements.size());
-		for (WebElement element : elements) {
-			String links = element.getAttribute("href");
-			if (links == null || links.isEmpty()) {
-				System.out.println("attribue is value is empty");
+		driver.get("https://www.facebook.com/");
+		List<WebElement> tagname = driver.findElements(By.tagName("a"));
+		System.out.println(tagname.size());
+		for (WebElement tag : tagname) {
+			String attribute = tag.getAttribute("href");
+			if (attribute == null || attribute.isEmpty()) {
+             System.out.println("given attribute is empty or null  :"+attribute);
 			}
 
-			URL url = new URL(links);
+			URL url = new URL(attribute);
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
-			con.connect();
 			if (con.getResponseCode() >= 200) {
-				System.out.println("This is not broken link" + links);
+				System.out.println("this link is not broken link  :" + attribute);
 			} else {
-				System.out.println("This is broken link" + links);
+				System.out.println("this link is broken link   :" + attribute);
 			}
-
 		}
 	}
+
 }

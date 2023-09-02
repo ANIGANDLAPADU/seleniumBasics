@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-02T07:52:41 IST" name="Default suite" finished-at="2023-09-02T07:53:05 IST" duration-ms="24221">
+  <suite started-at="2023-09-02T10:33:05 IST" name="Default suite" finished-at="2023-09-02T10:33:35 IST" duration-ms="30672">
     <groups>
     </groups>
-    <test started-at="2023-09-02T07:52:41 IST" name="Default test" finished-at="2023-09-02T07:53:05 IST" duration-ms="24221">
-      <class name="utils.test">
-        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:utils.test@58cbafc2]" started-at="2023-09-02T07:52:43 IST" name="testing" data-provider="data" finished-at="2023-09-02T07:52:55 IST" duration-ms="12410" status="PASS">
+    <test started-at="2023-09-02T10:33:05 IST" name="Default test" finished-at="2023-09-02T10:33:35 IST" duration-ms="30672">
+      <class name="partice.ReadingData">
+        <test-method signature="ddata(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:partice.ReadingData@58cbafc2]" started-at="2023-09-02T10:33:08 IST" name="ddata" data-provider="data" finished-at="2023-09-02T10:33:24 IST" duration-ms="15472" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,8 +32,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:utils.test@58cbafc2]" started-at="2023-09-02T07:52:55 IST" name="testing" data-provider="data" finished-at="2023-09-02T07:53:05 IST" duration-ms="10152" status="PASS">
+        </test-method> <!-- ddata -->
+        <test-method signature="ddata(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:partice.ReadingData@58cbafc2]" started-at="2023-09-02T10:33:24 IST" name="ddata" data-provider="data" finished-at="2023-09-02T10:33:35 IST" duration-ms="11656" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,8 +58,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-      </class> <!-- utils.test -->
+        </test-method> <!-- ddata -->
+      </class> <!-- partice.ReadingData -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,28 +1,31 @@
 package partice;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class a {
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://jqueryui.com/datepicker/");
-		String month = "may";
-		String date = "";
-		String year = "2024";
-		driver.switchTo().frame(0);
-		WebElement id = driver.findElement(By.id("datepicker"));
-		            id.click();
-		while (true) {
-			String Year = driver.findElement(By.xpath("//span[@class='ui-datepicker-year']")).getText();
-			String Month = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']")).getText();
-			if (Year.equalsIgnoreCase(year) && Month.equalsIgnoreCase(month)) {
-				break;
+	public static void main(String[] args) throws IOException {
+		FileOutputStream file = new FileOutputStream(System.getProperty("user.dir") + "\\testdata\\seshu.xlsx");
+		Scanner sc = new Scanner(System.in);
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFSheet sheet = workbook.createSheet();
+		for (int i = 1; i <= 4; i++) {
+			XSSFRow row = sheet.createRow(i);
+			for (int j = 0; j < 3; j++) {
+				System.out.println("Please Enter Data  :");
+				String value = sc.nextLine();
+				row.createCell(j).setCellValue(value);
 			}
-
 		}
+		System.out.println("writing Done.....");
+		workbook.write(file);
+		workbook.close();
+		file.close();
 
 	}
 }
