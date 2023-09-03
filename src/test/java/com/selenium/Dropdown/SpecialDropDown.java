@@ -24,7 +24,7 @@ public class SpecialDropDown {
 		do {
 			search.sendKeys(Keys.ARROW_DOWN);
 			text = search.getAttribute("value");
-			if (text.equals("Toronto,ON USA")) {
+			if (text.contains("Toronto,ON USA")) {
 				search.sendKeys(Keys.ENTER);
 				break;
 			}

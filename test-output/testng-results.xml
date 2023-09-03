@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-02T10:33:05 IST" name="Default suite" finished-at="2023-09-02T10:33:35 IST" duration-ms="30672">
+  <suite started-at="2023-09-03T16:48:09 IST" name="Default suite" finished-at="2023-09-03T16:48:38 IST" duration-ms="28627">
     <groups>
     </groups>
-    <test started-at="2023-09-02T10:33:05 IST" name="Default test" finished-at="2023-09-02T10:33:35 IST" duration-ms="30672">
-      <class name="partice.ReadingData">
-        <test-method signature="ddata(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:partice.ReadingData@58cbafc2]" started-at="2023-09-02T10:33:08 IST" name="ddata" data-provider="data" finished-at="2023-09-02T10:33:24 IST" duration-ms="15472" status="PASS">
+    <test started-at="2023-09-03T16:48:09 IST" name="Default test" finished-at="2023-09-03T16:48:38 IST" duration-ms="28627">
+      <class name="ReadingDataFromEcel.testclass">
+        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ReadingDataFromEcel.testclass@58cbafc2]" started-at="2023-09-03T16:48:11 IST" name="testing" data-provider="babu" finished-at="2023-09-03T16:48:27 IST" duration-ms="15889" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,8 +32,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ddata -->
-        <test-method signature="ddata(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:partice.ReadingData@58cbafc2]" started-at="2023-09-02T10:33:24 IST" name="ddata" data-provider="data" finished-at="2023-09-02T10:33:35 IST" duration-ms="11656" status="PASS">
+        </test-method> <!-- testing -->
+        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ReadingDataFromEcel.testclass@58cbafc2]" started-at="2023-09-03T16:48:27 IST" name="testing" data-provider="babu" finished-at="2023-09-03T16:48:38 IST" duration-ms="11107" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,8 +58,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ddata -->
-      </class> <!-- partice.ReadingData -->
+        </test-method> <!-- testing -->
+      </class> <!-- ReadingDataFromEcel.testclass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

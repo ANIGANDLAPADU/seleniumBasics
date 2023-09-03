@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="partice.ReadingData">
+      <class name="ReadingDataFromEcel.testclass">
         <methods>
-          <include name="ddata" invocation-numbers="0 1"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- partice.ReadingData -->
+      </class> <!-- ReadingDataFromEcel.testclass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

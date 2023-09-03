@@ -1,26 +1,26 @@
 package com.selenium.Dropdown;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AutoSuggestedDropDown {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.co.in/");
-		driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("selenium");
-		List<WebElement> list = driver.findElements(By.xpath("//li[@class='sbct']//div[@role='presentation']//span"));
-		for (int i = 0; i < list.size(); i++) {
-			String text = list.get(i).getText();
+		WebElement search = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
+		search.sendKeys(" automation testing");
+		String text;
+		do {
+			search.sendKeys(Keys.ARROW_DOWN);
+			text = search.getAttribute("value");
 			if (text.contains("testing")) {
-				list.get(i).click();
-				break;
+				search.sendKeys(Keys.ENTER);
 			}
-		}
+		} while (!text.isEmpty());
 
 	}
 
