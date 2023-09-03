@@ -8,13 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class AutoSuggetDropDownGoogle {
 
 	public static void main(String[] args) {
-
-		/* WebDriverManager.chromedriver().setup(); */
 
 		WebDriver driver = new ChromeDriver();
 
@@ -23,14 +19,14 @@ public class AutoSuggetDropDownGoogle {
 		driver.get("https://www.google.com/");
 
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("babu");
+		driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("automation testing");
 		List<WebElement> elements = driver
 				.findElements(By.xpath("//div[@class='wM6W7d' and @role='presentation']//span"));
 		System.out.println(elements.size());
 
 		for (int i = 0; i < elements.size(); i++) {
 			String text = elements.get(i).getText();
-			if (text.equals("babu88")) {
+			if (text.contains("tool")) {
 				elements.get(i).click();
 				break;
 			}
