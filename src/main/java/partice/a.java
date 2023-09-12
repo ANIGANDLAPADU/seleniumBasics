@@ -1,31 +1,27 @@
 package partice;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Scanner;
 
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class a {
-	public static void main(String[] args) throws IOException {
-		FileOutputStream file = new FileOutputStream(System.getProperty("user.dir") + "\\testdata\\seshu.xlsx");
-		Scanner sc = new Scanner(System.in);
-		XSSFWorkbook workbook = new XSSFWorkbook();
-		XSSFSheet sheet = workbook.createSheet();
-		for (int i = 1; i <= 4; i++) {
-			XSSFRow row = sheet.createRow(i);
-			for (int j = 0; j < 3; j++) {
-				System.out.println("Please Enter Data  :");
-				String value = sc.nextLine();
-				row.createCell(j).setCellValue(value);
-			}
-		}
-		System.out.println("writing Done.....");
-		workbook.write(file);
-		workbook.close();
-		file.close();
+
+	@Test
+	public void testing() throws IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://jqueryui.com/datepicker/");
+		driver.switchTo().frame(0);
+		WebElement date = driver.findElement(By.id("datepicker"));
+		date.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].value='03/03/2025';", date);
+		js.executeScript("arguments[0].click();", date);
 
 	}
+
 }
