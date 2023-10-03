@@ -1,15 +1,19 @@
-package partice;
+package com.selenium.scroll;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class action {
+public class ScrollByVisibleElement {
+
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://testautomationpractice.blogspot.com/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-500)", "");
-
+		WebElement element = driver.findElement(By.xpath("//select[@id='country']"));
+		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
+
 }

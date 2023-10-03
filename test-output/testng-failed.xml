@@ -5,7 +5,7 @@
     <classes>
       <class name="ReadingDataFromEcel.testclass">
         <methods>
-          <include name="testing" invocation-numbers="1"/>
+          <include name="testing"/>
         </methods>
       </class> <!-- ReadingDataFromEcel.testclass -->
     </classes>

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class testclass {
-	@Test(dataProvider = "babu",dataProviderClass = Reading.class)
+	@Test(dataProvider = "seshu",dataProviderClass = data.class)
 	public void testing(String username ,String Email,String phone ,String Address) {
      WebDriver driver = new ChromeDriver();
      driver.get("https://testautomationpractice.blogspot.com/");

@@ -1,28 +1,22 @@
 package partice;
 
-import java.io.FileInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class reading {
 
 	public static void main(String[] args) throws IOException {
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\testdata\\seshu.xlsx");
-		XSSFWorkbook workbook = new XSSFWorkbook(file);
-		XSSFSheet sheet = workbook.getSheet("Sheet1");
-		int rows = sheet.getLastRowNum();
-		Short cells = sheet.getRow(0).getLastCellNum();
-		for (int r = 1; r <= rows; r++) {
-			XSSFRow row = sheet.getRow(r);
-			for (int c = 0; c < cells; c++) {
-			String	value = row.getCell(c).toString();
-			System.out.println(value);
-			}
-			System.out.println();
+		File file = new File(System.getProperty ("user.dir")+ "\\testdata\\file.txt");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		String str = "";
+		while((str=br.readLine())!=null) {
+			System.out.println(str);
 		}
+		br.close();
+
 	}
 
 }

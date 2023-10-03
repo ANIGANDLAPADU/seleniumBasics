@@ -15,13 +15,13 @@ public class AuthenticatedPopop {
 
 		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 
-		String text = driver.findElement(By.xpath("//p[contains(text(),'Congratulations!')]")).getText();
-
-		if (text.contains("Congratulation")) {
+		String actual = driver.findElement(By.xpath("//p[contains(text(),'Congratulations!')]")).getText();
+		if (actual.contains("Congratulation")) {
 			System.out.println("successful login");
 		} else {
 			System.out.println("login failed");
 		}
+
 	}
 
 }
