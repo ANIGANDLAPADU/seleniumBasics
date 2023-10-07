@@ -1,32 +1,38 @@
 package partice;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Scanner;
-
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Broken {
 
-	public static void main(String[] args) throws IOException {
-		FileOutputStream file = new FileOutputStream(System.getProperty("user.dir")+"\\myfile.xlsx");
-		XSSFWorkbook wb = new XSSFWorkbook();
-		Scanner sc = new Scanner(System.in);
-		XSSFSheet sheet = wb.createSheet();
-		for (int i = 0; i <= 4; i++) {
-			XSSFRow row = sheet.createRow(i);
-			for (int j = 0; j < 3; j++) {
-				System.out.println("Please Enter the data  :");
-				String value = sc.next();
-				row.createCell(i).setCellValue(value);
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://testautomationpractice.blogspot.com/");
+
+		int rows = driver.findElements(By.xpath("//table[@name='BookTable']//tr")).size();
+		int cols = driver.findElements(By.xpath("//table[@name='BookTable']//th")).size();
+		for (int i = 2; i <= rows; i++) {
+			for (int j = 1; j <= cols; j++) {
+				String data = driver.findElement(By.xpath("//table[@name='BookTable']//tr[" + i + "]//td[" + j + "]"))
+						.getText();
+				System.out.print(data + "  ");
+			}
+			System.out.println();
+		}
+		for (int i = 2; i <= rows; i++) {
+			String author = driver.findElement(By.xpath("//table[@name='BookTable']//tr[" + i + "]//td[2]")).getText();
+			if (author.equals("Amit")) {
+				String book = driver.findElement(By.xpath("//table[@name='BookTable']//tr[" + i + "]//td[1]"))
+						.getText();
+				System.out.println(author + " " + book);
+
 			}
 		}
-		System.out.println("Writing is Done");
-		wb.write(file);
-		wb.close();
-		file.close();
+
+		driver.close();
 	}
 
 }

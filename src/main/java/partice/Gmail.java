@@ -3,19 +3,38 @@ package partice;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Gmail {
 
 	public static void main(String[] args) {
-		/* WebDriverManager.chromedriver().setup(); */
 		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.flipkart.com/");
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://accounts.google.com/InteractiveLogin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AeDOFXjU2ZsRsswlgZI7pPswiZ-msQsQODJAy7SJh_aF4qywG_5PTNDDeW1rpv5XRUotAdlcb7VxOA&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-        driver.findElement(By.xpath("//input[@type='email']")).sendKeys("karanamseshubabu94@gmail.com");
+		WebElement button = driver.findElement(By.xpath("//span[@role='button']"));
+		if (button.isDisplayed()) {
+			button.click();
+		}
+
+		WebElement element = driver.findElement(By.xpath("//span[contains(text(),'Fashion')]"));
+		new Actions(driver).moveToElement(element).build().perform();
+		WebElement kids = driver.findElement(By.xpath("/html[1]/body[1]/div[4]/div[1]/object[1]/a[9]"));
+		new Actions(driver).moveToElement(kids).build().perform();
+		WebElement boysandgirls = driver.findElement(By.xpath("//a[normalize-space()='Boys & Girls Tshirts']"));
+		new Actions(driver).moveToElement(boysandgirls).sendKeys(Keys.ENTER).perform();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.pollingEvery(Duration.ofSeconds(2));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("")));
+		
+		driver.close();
+
 	}
 
 }
