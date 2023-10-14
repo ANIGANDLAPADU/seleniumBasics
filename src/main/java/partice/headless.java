@@ -1,44 +1,21 @@
 package partice;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.time.Duration;
-import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 
 public class headless {
 
 	public static void main(String[] args) throws IOException {
-		ChromeOptions options = new ChromeOptions();
-		options.setHeadless(true);
-		/* ChromeDriverManager.chromedriver().setup(); */
-		ChromeDriver driver = new ChromeDriver(options);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://www.google.com/");
-		List<WebElement> nolinks = driver.findElements(By.tagName("a"));
-		System.out.println(nolinks.size());
-		for (WebElement elements : nolinks) {
-			String arr = elements.getAttribute("href");
-			if (arr == null || arr.isEmpty()) {
-				continue;
-			}
-
-			URL url = new URL(arr);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.connect();
-			if (conn.getResponseCode() >= 200) {
-				System.out.println("URL is not a broken link" + arr);
-			} else {
-				System.out.println("URL is broken link " + arr);
-			}
-		}
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		/*
+		 * WebElement element = driver.findElement(By.xpath("//select[@id='country']"));
+		 * Select select = new Select(element); List<WebElement> options =
+		 * select.getOptions(); for (WebElement option : options) { String str =
+		 * option.getText(); if (str.equals("India")) { option.click(); } }
+		 */
 
 	}
 

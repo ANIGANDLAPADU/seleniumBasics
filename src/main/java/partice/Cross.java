@@ -1,31 +1,21 @@
 package partice;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Cross {
-	WebDriver driver;
-
-	@BeforeTest()
-	@Parameters("browser")
-	public void test(String str) {
-		if (str.equals("chrome")) {
-			driver = new ChromeDriver();
-			driver.get("https://www.facebook.com/");
-		} else if (str.equals("Edge")) {
-			driver = new EdgeDriver();
-			driver.get("https://www.facebook.com/");
-
+	public static void main(String[] args) throws IOException {
+		File file = new File(System.getProperty("user.dir")+"\\testdata\\file.txt");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		String str = "";
+		if ((str = br.readLine()) != null) {
+			System.out.println(str);
 		}
-	}
-
-	@Test()
-	public void testing() {
+		br.close();
+		fr.close();
 
 	}
-
 }
