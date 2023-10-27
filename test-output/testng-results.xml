@@ -1,65 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-01T05:43:02 IST" name="Default suite" finished-at="2023-10-01T05:43:29 IST" duration-ms="26917">
+  <suite started-at="2023-10-20T12:51:18 IST" name="Suite" finished-at="2023-10-20T12:51:50 IST" duration-ms="31460">
     <groups>
     </groups>
-    <test started-at="2023-10-01T05:43:02 IST" name="Default test" finished-at="2023-10-01T05:43:29 IST" duration-ms="26917">
-      <class name="ReadingDataFromEcel.testclass">
-        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ReadingDataFromEcel.testclass@58cbafc2]" started-at="2023-10-01T05:43:03 IST" name="testing" data-provider="seshu" finished-at="2023-10-01T05:43:20 IST" duration-ms="16563" status="PASS">
+    <test started-at="2023-10-20T12:51:18 IST" name="chromebrowser" finished-at="2023-10-20T12:51:35 IST" duration-ms="16936">
+      <class name="pageobjects.test">
+        <test-method is-config="true" signature="start(java.lang.String)[pri:0, instance:pageobjects.test@5890e879]" started-at="2023-10-20T12:51:18 IST" name="start" finished-at="2023-10-20T12:51:25 IST" duration-ms="6876" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[seshu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[seshu@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[9493033456]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Nandigama]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-        <test-method signature="testing(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ReadingDataFromEcel.testclass@58cbafc2]" started-at="2023-10-01T05:43:20 IST" name="testing" data-provider="seshu" finished-at="2023-10-01T05:43:29 IST" duration-ms="8708" status="PASS">
+        </test-method> <!-- start -->
+        <test-method signature="forwarddatepicker()[pri:0, instance:pageobjects.test@5890e879]" started-at="2023-10-20T12:51:25 IST" name="forwarddatepicker" finished-at="2023-10-20T12:51:31 IST" duration-ms="5648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forwarddatepicker -->
+        <test-method signature="Backdatepicker()[pri:1, instance:pageobjects.test@5890e879]" started-at="2023-10-20T12:51:31 IST" name="Backdatepicker" finished-at="2023-10-20T12:51:35 IST" duration-ms="4184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Backdatepicker -->
+        <test-method is-config="true" signature="close()[pri:0, instance:pageobjects.test@5890e879]" started-at="2023-10-20T12:51:35 IST" name="close" finished-at="2023-10-20T12:51:35 IST" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- pageobjects.test -->
+    </test> <!-- chromebrowser -->
+    <test started-at="2023-10-20T12:51:35 IST" name="edgebrowser" finished-at="2023-10-20T12:51:50 IST" duration-ms="14456">
+      <class name="pageobjects.test">
+        <test-method is-config="true" signature="start(java.lang.String)[pri:0, instance:pageobjects.test@1a245833]" started-at="2023-10-20T12:51:35 IST" name="start" finished-at="2023-10-20T12:51:41 IST" duration-ms="6418" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[babu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[babu@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[1234566789]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Nandigama]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-      </class> <!-- ReadingDataFromEcel.testclass -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- start -->
+        <test-method signature="forwarddatepicker()[pri:0, instance:pageobjects.test@1a245833]" started-at="2023-10-20T12:51:41 IST" name="forwarddatepicker" finished-at="2023-10-20T12:51:46 IST" duration-ms="4186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forwarddatepicker -->
+        <test-method signature="Backdatepicker()[pri:1, instance:pageobjects.test@1a245833]" started-at="2023-10-20T12:51:46 IST" name="Backdatepicker" finished-at="2023-10-20T12:51:49 IST" duration-ms="3525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Backdatepicker -->
+        <test-method is-config="true" signature="close()[pri:0, instance:pageobjects.test@1a245833]" started-at="2023-10-20T12:51:49 IST" name="close" finished-at="2023-10-20T12:51:50 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- pageobjects.test -->
+    </test> <!-- edgebrowser -->
+  </suite> <!-- Suite -->
 </testng-results>

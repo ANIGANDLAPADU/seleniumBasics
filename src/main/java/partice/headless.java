@@ -1,22 +1,39 @@
 package partice;
 
-import java.io.IOException;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.File;
 
 public class headless {
-
-	public static void main(String[] args) throws IOException {
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://testautomationpractice.blogspot.com/");
-		/*
-		 * WebElement element = driver.findElement(By.xpath("//select[@id='country']"));
-		 * Select select = new Select(element); List<WebElement> options =
-		 * select.getOptions(); for (WebElement option : options) { String str =
-		 * option.getText(); if (str.equals("India")) { option.click(); } }
-		 */
-
+	public static void create(String filepath) {
+		File file = new File(filepath);
+		if (!file.exists()) {
+			file.mkdir();
+		}
 	}
 
+	public static void rename(String filepath, String newpath) {
+		File old = new File(filepath);
+		File newf = new File(newpath);
+		if (old.exists()) {
+			old.renameTo(newf);
+		}
+	}
+
+	public static void delete(String filepath) {
+		File file = new File(filepath);
+		if (file.exists()) {
+			for (File f : file.listFiles()) {
+				f.delete();
+			}
+			file.delete();
+		}
+	}
+
+	public static void main(String[] args) {
+		String filepath = "D:\\seshu";
+		String newpath = "D:\\babu";
+		create(filepath);
+		rename(filepath, newpath);
+		delete(filepath);
+
+	}
 }

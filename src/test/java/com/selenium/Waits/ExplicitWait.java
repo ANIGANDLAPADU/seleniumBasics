@@ -19,6 +19,7 @@ public class ExplicitWait {
 		waiting.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='txtPword']")))
 				.sendKeys("Admin");
 		waiting.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='login']"))).click();
+		
 	}
 
 }

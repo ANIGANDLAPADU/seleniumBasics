@@ -8,12 +8,7 @@ public class links {
 
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://testautomationpractice.blogspot.com/");
-		driver.findElement(By.xpath("//button[@onclick='myFunctionAlert()']")).click();
-		String str = driver.switchTo().alert().getText();
-		System.out.println(str);
-		driver.switchTo().frame(0);
-
+		driver.get("https://demo.guru99.com/test/");
+		driver.findElement(By.xpath("//input[@name='bdaytime']"));
 	}
-
 }

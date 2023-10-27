@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="chrome(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="chromebrowser(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="partice.Cross">
+      <class name="pageobjects.test">
         <methods>
-          <include name="test"/>
-          <include name="testing"/>
+          <include name="Backdatepicker"/>
+          <include name="forwarddatepicker"/>
+          <include name="start"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- partice.Cross -->
+      </class> <!-- pageobjects.test -->
     </classes>
-  </test> <!-- chrome(failed) -->
-  <test thread-count="5" parallel="tests" name="edge(failed)">
+  </test> <!-- chromebrowser(failed) -->
+  <test thread-count="5" name="edgebrowser(failed)">
     <parameter name="browser" value="Edge"/>
     <classes>
-      <class name="partice.Cross">
+      <class name="pageobjects.test">
         <methods>
-          <include name="test"/>
-          <include name="testing"/>
+          <include name="Backdatepicker"/>
+          <include name="forwarddatepicker"/>
+          <include name="start"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- partice.Cross -->
+      </class> <!-- pageobjects.test -->
     </classes>
-  </test> <!-- edge(failed) -->
+  </test> <!-- edgebrowser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

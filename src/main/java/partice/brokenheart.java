@@ -1,29 +1,27 @@
 package partice;
 
-import java.util.List;
+import java.io.FileInputStream;
+import java.io.IOException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class brokenheart {
 
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://testautomationpractice.blogspot.com/");
-		WebElement element = driver.findElement(By.xpath("//select[@id='country']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView()", element);
-		Select select = new Select(element);
-		List<WebElement> drop = select.getOptions();
-		for (WebElement dp : drop) {
-			String text = dp.getText();
-			if (text.equals("India")) {
-				dp.click();
+	public static void main(String[] args) throws IOException {
+		FileInputStream file = new FileInputStream("D:\\javaprojects\\seleniumcore\\testdata\\seshu.xlsx");
+		XSSFWorkbook wb = new XSSFWorkbook(file);
+		XSSFSheet sheet = wb.getSheet("Sheet0");
+		int row = sheet.getLastRowNum();
+		int cell = sheet.getRow(1).getLastCellNum();
+		for (int i = 1; i <= row; i++) {
+			XSSFRow rows=sheet.getRow(i);
+			for (int j = 1; j < cell; j++) {
+			String	str=rows.getCell(j).toString();
+             System.out.print(str);
 			}
+			System.out.println();
 		}
 	}
 

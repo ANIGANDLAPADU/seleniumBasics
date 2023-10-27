@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
-  <test thread-count="5" name="chrome">
-	  <parameter name="browser" value="chrome"></parameter>
-    <classes>
-      <class name="partice.Cross"/>
-    </classes>
-  </test> 
-   <test thread-count="5" name="edge">
-	  <parameter name="browser" value="Edge"></parameter>
-    <classes>
-      <class name="partice.Cross"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="Suite" parallel="false">
+	<test name="chromebrowser">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="pageobjects.test" />
+		</classes>
+	</test>
+	<test name="edgebrowser">
+		<parameter name="browser" value="Edge"></parameter>
+		<classes>
+			<class name="pageobjects.test" />
+		</classes>
+	</test>
+	<!--
+	parallel -->
+</suite> <!--
+Suite -->
