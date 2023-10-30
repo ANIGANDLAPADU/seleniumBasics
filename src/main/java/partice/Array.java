@@ -6,10 +6,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-public class Array {
+class ParentArray {
+	public void seshu() {
+		System.out.println("srinivasarao");
+	}
+
+	public void seshu(int a) {
+		System.out.println("seshubabu");
+	}
+}
+
+public class Array extends ParentArray {
+	public void seshu() {
+		super.seshu();
+		super.seshu(10);
+		System.out.println("akhilbabu");
+	}
+
 	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
+		Array array = new Array();
+		array.seshu();
+		ChromeOptions option = new ChromeOptions();
+		option.setHeadless(true);
+		WebDriver driver = new ChromeDriver(option);
 		driver.get("https://www.flipkart.com/");
 		WebElement button = driver.findElement(By.xpath("//span[@role='button']"));
 		if (button.isEnabled() && button.isDisplayed()) {
