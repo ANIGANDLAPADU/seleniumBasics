@@ -23,5 +23,6 @@ public class action {
 		File scr = element.getScreenshotAs(OutputType.FILE);
 		File file = new File(System.getProperty("user.dir")+"\\screenshots\\element.png");
 		FileUtils.copyFile(scr, file);
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 }
