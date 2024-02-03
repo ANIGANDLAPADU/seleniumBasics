@@ -1,46 +1,40 @@
 package partice;
 
+import java.net.MalformedURLException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchSessionException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
-class ParentArray {
-	public void seshu() {
-		System.out.println("srinivasarao");
-	}
-
-	public void seshu(int a) {
-		System.out.println("seshubabu");
-	}
-}
-
-public class Array extends ParentArray {
-	public void seshu() {
-		super.seshu();
-		super.seshu(10);
-		System.out.println("akhilbabu");
-	}
-
-	public static void main(String[] args) {
-		Array array = new Array();
-		array.seshu();
-		ChromeOptions option = new ChromeOptions();
-		option.setHeadless(true);
-		WebDriver driver = new ChromeDriver(option);
+public class Array {
+	@Test
+	public void test() throws MalformedURLException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.flipkart.com/");
-		WebElement button = driver.findElement(By.xpath("//span[@role='button']"));
-		if (button.isEnabled() && button.isDisplayed()) {
-			button.click();
-		}
-		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='zlQd20']"));
-		for (WebElement element : elements) {
-			String str = element.getText();
-			System.out.println(str);
-		}
+		driver.findElement(By.xpath("//div[@class='_2SmNnR']//self::input")).sendKeys("realme");
 
+		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='YGcVZO _2VHNef']//self::div"));
+		for (WebElement element : elements) {
+			String text = element.getText();
+			System.out.println(text);
+			try {
+				if (text.equals("realme 11x")) {
+					element.click();
+				}
+			} catch (StaleElementReferenceException eb) {
+
+			} catch (NoSuchSessionException be) {
+
+			}
+			driver.close();
+
+		}
 	}
 }

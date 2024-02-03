@@ -18,7 +18,7 @@ public class BrokenLinks {
 		WebElement element = driver.findElement(By.xpath("//a[@id='showMoreLess']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,100)");
-		js.executeScript("arguments[0].scrollIntoView()", element);
+		js.executeScript("arguments[0].scrollIntoView", element);
 		element.click();
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 		int rows = driver.findElements(By.xpath("//table[@class='dataTable']//tr")).size() - 1;

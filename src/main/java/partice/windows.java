@@ -24,6 +24,4 @@ public class windows {
 		driver.close();
 	}
 
-	
-
 }

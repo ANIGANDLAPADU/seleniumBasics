@@ -14,7 +14,6 @@ public class ReadingData {
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(email);
 		driver.findElement(By.xpath("//input[@id='phone']")).sendKeys(password);
 		driver.findElement(By.xpath("//textarea[@id='textarea']")).sendKeys(address);
-
 	}
 
 }

@@ -9,7 +9,7 @@ import ReadingDataFromEcel.ExcelUtility;
 public class dataproviders {
 	@DataProvider(name = "data")
 	public String[][] data() throws IOException {
-		String path = System.getProperty("user.dir")+"\\testdata\\seshu.xlsx";
+		String path = System.getProperty("user.dir")+"\\testdata\\seshu1.xlsx";
 		ExcelUtility util = new ExcelUtility(path);
 		int rows = util.getRowCount("Sheet1");
 		int cells = util.getCellCount("Sheet1", 0);
