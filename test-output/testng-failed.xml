@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selenium.TestNg.Testing">
+      <class name="partice.Cross">
         <methods>
-          <include name="testone"/>
+          <include name="testing"/>
         </methods>
-      </class> <!-- com.selenium.TestNg.Testing -->
+      </class> <!-- partice.Cross -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

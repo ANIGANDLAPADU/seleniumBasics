@@ -37,6 +37,7 @@ public class action {
 		List<WebElement> list1 = driver.findElements(By.xpath("//button[contains(text(),'Alert')]"));
 		list1.stream().filter(c -> c.getText().equals("Alert")).forEach(click -> click.click());
 		driver.switchTo().alert().accept();
+	
 	}
 
 }

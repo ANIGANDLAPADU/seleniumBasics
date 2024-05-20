@@ -1,30 +1,38 @@
 package partice;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+import java.util.Set;
 
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Cross {
-	public static void main(String[] args) throws IOException {
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\myfile.xlsx");
-		XSSFWorkbook workbook = new XSSFWorkbook(file);
-		XSSFSheet sheet = workbook.getSheet("Sheet0");
-		int rows = sheet.getLastRowNum();
-		int cells = sheet.getRow(0).getLastCellNum();
-		for (int i = 0; i < rows; i++) {
-			XSSFRow row = sheet.getRow(i);
-			for (int j = 0; j < cells; j++) {
-                 String str=row.getCell(j).toString(); 
-                 System.out.print("   "+str);
-			}
-			System.out.println();
 
+	public static void main(String[] args) throws IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		List<WebElement> tags = driver.findElements(By.tagName("a"));
+		int count = 0;
+		for (WebElement tag : tags) {
+			String str = tag.getAttribute("href");
+			URL url = new URL(str);
+			HttpURLConnection connect = (HttpURLConnection) url.openConnection();
+			connect.connect();
+			if (connect.getResponseCode() >= 200) {
+				count++;
+				System.out.println(str);
+			}
 		}
-       workbook.close();
-       file.close();
-      
+		System.out.println(count);
+		Set<String> winId = driver.getWindowHandles();
+		for(String win: winId) {
+			driver.switchTo().window(win);
+		}
+
 	}
 }
