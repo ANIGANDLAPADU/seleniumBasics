@@ -24,10 +24,10 @@ public class AutoSuggestDropDown {
 		
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("selenium");
+		driver.findElement(By.xpath("//textarea[@class='gLFyf']")).sendKeys("selenium");
 		Thread.sleep(3000);
 
-		List<WebElement> list=driver.findElements(By.xpath("//div[contains(@class,'wM6W7d')]//span"));
+		List<WebElement> list=driver.findElements(By.xpath("//div[@class='wM6W7d' and @role='presentation']//span"));
 		
 		System.out.println("Number of suggestions:"+list.size());
 		
@@ -37,7 +37,7 @@ public class AutoSuggestDropDown {
 		{
 			String text=list.get(i).getText();
 			
-			if(text.equals("selenium tutorial"))
+			if(text.contains("selenium tutorial"))
 			{
 				list.get(i).click();
 				break;
