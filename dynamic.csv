@@ -1,0 +1,10 @@
+Name=seshubabu
+email=seshubabu@gmail.com
+password=123456
+address=nandigama
+date=24
+ forward_month_year = October 2024
+ back_month_year=November 2022
+ #browser= chrome
+ #browser=edge
+ browser =firefox
